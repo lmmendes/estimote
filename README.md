@@ -98,12 +98,10 @@ api.beacons.with_id(beacon_id)
 <https://cloud.estimote.com/docs/#api-Beacons-PostPendingSettingsSingleBeacon> Store changes in settings that will be set in one beacon (using the unique ID) by bulk updater in Estimote iOS app or other app based on Estimote SDK.
 
 **Fields:** `beacon_id` of type `String` represents the unique ID of a beacon  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-`settings` of type `Object` representing the new settings of the beacon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`settings` of type `Object` representing the new settings of the beacon
 
-**Example:**`beacon_id = "B9407F30-F5F8-466E-AFF9-25556B57FE6D:major:minor"`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-`settings = { interval: 1000, basic_power_mode: true, ...} `
+**Example:**`beacon_id = "B9407F30-F5F8-466E-AFF9-25556B57FE6D:major:minor"`  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`settings = { interval: 1000, basic_power_mode: true, ...} `
 
 **Usage:**  
 
@@ -120,10 +118,10 @@ api.beacons.store_beacon_settings(beacon_id, settings)
 <https://cloud.estimote.com/docs/#api-Beacons-GetBeacons> Store settings changes that will be applied to beacons (one or more) by bulk updater in Estimote iOS app or other app based on Estimote SDK.  
 
 **Fields:** `beacons` of type `String[]` represents the unique ID of all beacons  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 `settings` of type `Object` representing the new settings of the beacon
 
-**Example:**`beacon_id = "B9407F30-F5F8-466E-AFF9-25556B57FE6D:major:minor"`
+**Example:**`beacon_id = "B9407F30-F5F8-466E-AFF9-25556B57FE6D:major:minor"`  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 `settings = { interval: 1000, basic_power_mode: true, ...} `
 
