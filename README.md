@@ -103,7 +103,7 @@ api.beacons.with_id(beacon_id)
 <https://cloud.estimote.com/docs/#api-Beacons-PostPendingSettingsSingleBeacon> Store changes in settings that will be set in one beacon (using the unique ID) by bulk updater in Estimote iOS app or other app based on Estimote SDK.
 
 **Fields:** `beacon_id` of type `String` represents the unique ID of a beacon  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 `settings` of type `Object` representing the new settings of the beacon
 
 **Example:**`beacon_id = "B9407F30-F5F8-466E-AFF9-25556B57FE6D:major:minor"`
