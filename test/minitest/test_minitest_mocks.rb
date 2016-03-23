@@ -11,13 +11,16 @@ require './lib/estimote/beacons.rb'
 require './lib/estimote/analytics.rb'
 
 class TestAPI < Minitest::Test
+  APP_KEY         = 'crm-13k'
+  APP_TOKEN       = 'e94154369d85b14b3c7be85eb402c795'
+  VALID_BEACON_ID = 'B9407F30-F5F8-466E-AFF9-25556B57FE6D:64529:26670'
   VALID_SETTINGS  = {
     interval: 1000 # change with desired settings
   }
   VALID_REGION    = 'B9407F30-F5F8-466E-AFF9-25556B57FE6D'
-  VALID_BEACON_ID = 'REPLACE_WITH_VALID_BEACON_ID'
-  APP_KEY   = 'REPLACE_WITH_YOUR_KEY'
-  APP_TOKEN = 'REPLACE_WITH_YOUR_TOKEN'
+  # VALID_BEACON_ID = 'REPLACE_WITH_VALID_BEACON_ID'
+  # APP_KEY   = 'REPLACE_WITH_YOUR_KEY'
+  # APP_TOKEN = 'REPLACE_WITH_YOUR_TOKEN'
 
   # let(:client) { Estimote.new(api_key: APP_KEY, api_token: APP_TOKEN) }
 
@@ -87,7 +90,6 @@ class TestAPI < Minitest::Test
     invalid_settings = {
       not_a_field: "not_a_value"
     }
-    binding.pry
     begin
       @client.beacons.store_beacon_settings VALID_BEACON_ID, invalid_settings
       code = @client.beacons.last_response.code
