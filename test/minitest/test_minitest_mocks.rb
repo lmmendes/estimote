@@ -118,7 +118,7 @@ class TestAPI < Minitest::Test
     rescue
       code = e.response.code
     end
-    assert code == 404, message: "Should have gotten OK 200 response"
+    assert code == 200, message: "Should have gotten OK 200 response"
   end
 
   def test_unique_visits_with_invalid_region
@@ -128,7 +128,7 @@ class TestAPI < Minitest::Test
     rescue => e
       code = e.response.code
     end
-    assert code == 200, message: "Should have gotten invalid region error"
+    assert code == 404, message: "Should have gotten invalid region error"
   end
 
   def test_visits_with_valid_region
@@ -148,7 +148,7 @@ class TestAPI < Minitest::Test
     rescue => e
       code = e.response.code
     end
-    assert code == 200, message: "Should have gotten invalid region error"
+    assert code == 404, message: "Should have gotten invalid region error"
   end
 end 
 
