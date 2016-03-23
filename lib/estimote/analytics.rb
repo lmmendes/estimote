@@ -1,17 +1,19 @@
 module Estimote
   class Analytics
-    def unique_visitors (region)
-      uri       = API_URL + "analytics/#{region}/unique_visitors"
-      response  = RestClient.get uri, { Authorization:  "Basic #{Estimote.client.auth}", Accept: 'application/json' }
+    attr_accessor :last_response
 
-      JSON.parse(response)
+    def unique_visitors region
+      uri       = API_URL + "analytics/#{region}/unique_visitors"
+      @last_response  = RestClient.get uri, { Authorization:  "Basic #{Estimote.client.auth}", Accept: 'application/json' }
+
+      JSON.parse(@last_response)
     end
 
-    def visits (region)
+    def visits region
       uri       = API_URL + "analytics/#{region}/visits"
-      response  = RestClient.get uri, { Authorization:  "Basic #{Estimote.client.auth}", Accept: 'application/json' }
+      @last_response  = RestClient.get uri, { Authorization:  "Basic #{Estimote.client.auth}", Accept: 'application/json' }
 
-      JSON.parse(response)
+      JSON.parse(@last_response)
     end
   end
 end

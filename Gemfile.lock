@@ -10,6 +10,7 @@ GEM
       domain_name (~> 0.5)
     method_source (0.8.2)
     mime-types (2.99.1)
+    minitest (5.8.4)
     netrc (0.11.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -32,6 +33,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  minitest (~> 5.8, >= 5.8.4)
   pry (~> 0.10.3)
   pry-byebug
   rest-client (~> 1.8)
